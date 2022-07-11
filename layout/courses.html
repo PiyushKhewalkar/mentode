@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="poppins">
+    <div class="hidden bg-black md:bg-white md:block main-navbar h-screen md:h-auto text-gray-100 py-6 md:py-0 fixed md:static w-full left-0 md:px-20 md:pt-7">
+        <div class="container mx-auto px-5 lg:px-0">
+          <div class="select-none flex flex-col md:flex-row justify-between md:items-center">
+            <div class="logo font-black text-2xl select-none cursor-pointer w-full text-center md:text-left relative">
+              <span id="closeButton" class="inline-block md:hidden select-none rotate-45 absolute left-5 -top-3 font-thin text-6xl">+</span>
+              <img src="img\MENTODE black.png" alt="Mentode logo" class="h-9 md:hidden w-40 mx-auto md:ml-0">
+              <img src="img\MENTODE LOGO.png" alt="Mentode logo" class="h-11 md:block hidden w-40 mx-auto md:ml-0">
+            </div>
+            <div class="navbar order-1 md:order-0 mt-7 md:mt-0 md:mr-4">
+              <ul class="flex text-lg flex-col md:flex-row md:items-center md:space-x-6">
+                <li><a href="index.html" class=" font-medium md:text-black  p-3 hover:bg-gray-100 hover:text-gray-400 hover:bg-opacity-25 transition-all duration-200 flex md:inline-block items-center space-x-2 md:space-x-0">
+                  <span>Home</span>
+                </a></li>
+                <li><a href="courses.html" class=" font-medium md:text-black p-3 hover:bg-gray-100 hover:text-gray-400 hover:bg-opacity-25 transition-all duration-200 flex md:inline-block items-center space-x-2 md:space-x-0">
+                  <span>Courses</span>
+                </a></li>
+                <li><a href="community.html" class=" font-medium md:text-black p-3 hover:bg-gray-100 hover:text-gray-400 hover:bg-opacity-25 transition-all duration-200 flex md:inline-block items-center space-x-2 md:space-x-0">
+                  <p>Community</p>
+                </a></li>
+                
+              </ul>
+            </div>
+            <div class="flex md:hidden lg:flex items-center space-x-3 p-[8px] cursor-pointer group order-0 md:order-1 mt-8 md:mt-0 w-28">
+              <div class="group flex flex-col md:flex-row md:items-center space-y-3 md:space-y-0 relative">
+                <div class="order-1 md:order-0 flex flex-col md:flex-row md:items-center w-full md:space-x-2 mt-8 md:mt-0 mr-2">
+                  <span class="block md:hidden font-thin md:px-5 lg:px-0 md:text-black">Hello,</span>
+                  <span class="block md:hidden pr-2 whitespace-nowrap md:text-black">Piyush</span>
+                </div>
+                <img src="./img/discord.png" class="order-0 md:order-1 w-14 h-14 rounded-full block border-2 p-[0.15rem] border-[#ffa905]" alt="user image">
+                <ul class="hidden lg:group-hover:block z-10 md:group-hover:block whitespace-nowrap links md:absolute md:bg-white md:text-gray-900 md:top-[40px] md:right-0 md:border border-t-0 border-gray-300 rounded-b">
+                  <li> <a href="$" class="px-8 py-3 block hover:bg-gray-100">Profile</a> </li>
+                  <li> <a href="$" class="px-8 py-3 block hover:bg-gray-100">Sign Out</a> </li>
+                </ul>
+              </div>
+            </div>
+            <div class="order-2 hover:bg-gray-100 hover:bg-opacity-25 mt-4">
+              <a href="#" class="p-3 md:hidden hover:bg-black hover:bg-opacity-25 flex items-center space-x-2 md:space-x-0">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block md:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                  </svg>
+                </span>
+                <span>Logout</span>
+              </a>
+          </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- fixed w-full h-screen overflow-y-hidden top-10 left-72 bg-white pl-8 pt-16 rounded-[30px] border -rotate-6 -->
+
+      <div id="siteWrapper" class="site-wrapper lg:mt-8">
+  
+    
+        <div class="mobile-navbar-header p-5 block md:hidden">
+          <div class="container mx-auto  lg:px-0  flex items-center justify-between">
+            <button id="burgerButton" class="text-gray-700 bg-gray-100 hover:bg-gray-200 p-3 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 fill-current" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+            <img src="img\MENTODE LOGO.png" alt="Mentode logo" class="h-11 w-40">
+            <button id="searchButton" class="text-gray-700 bg-gray-100 hover:bg-gray-200 p-3 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 block md:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- mobile nav header -->
+  
+         <!--Features START-->
+<div class="container mx-auto px-5 lg:px-0">
+  <div class="page-title text-4xl font-medium mb-5 text-gray-600 text-center pt-16 md:text-left">
+    <h1 class="text-center">All Courses</h1>
+  </div>
+  <!-- feature-title -->
+
+  <div class="products grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center mt-16 mb-64">
+
+    <div class="product border rounded-xl w-fit mx-auto shadow-xl">
+      <div class="product-image h-fit w-fit">
+        <img src="./img/sample.jpg" alt="Up to date courses" class="rounded-t-xl h-[220px] w-[400px]">
+      </div>
+      <!-- product image -->
+      <div class="mx-8 my-8">
+      <h1 class="font-medium mt-5 mb-3 text-2xl rounded-b-xl">Community Based Learning</h1>
+        <!-- product info -->
+        <p class="font-normal text-sm my-2">By Piyush Khewalkar</p>
+        <p class="flex font-medium mt-5">
+          <span class="mr-2"><img src="img/clock.png" alt="duration"></span>
+          10 Hours Course
+        </p>
+      </div>
+      <div class="w-fit mx-auto my-7">
+        <button class="bg-[#ffa905] px-7 py-3 rounded-full hover:bg-white hover:border-2">View More</button>
+      </div>
+      <!-- product-image -->
+    </div>
+    <!-- product -->
+
+    <div class="product border rounded-xl w-fit mx-auto shadow-xl">
+      <div class="product-image h-fit w-fit">
+        <img src="./img/sample.jpg" alt="Up to date courses" class="rounded-t-xl h-[220px] w-[400px]">
+      </div>
+      <!-- product image -->
+      <div class="mx-8 my-8">
+      <h1 class="font-medium mt-5 mb-3 text-2xl rounded-b-xl">Community Based Learning</h1>
+        <!-- product info -->
+        <p class="font-normal text-sm my-2">By Piyush Khewalkar</p>
+        <p class="flex font-medium mt-5">
+          <span class="mr-2"><img src="img/clock.png" alt="duration"></span>
+          10 Hours Course
+        </p>
+      </div>
+      <div class="w-fit mx-auto my-7">
+        <button class="bg-[#ffa905] px-7 py-3 rounded-full hover:bg-white hover:border-2">View More</button>
+      </div>
+      <!-- product-image -->
+    </div>
+    <!-- product -->
+
+
+    <div class="product border rounded-xl w-fit mx-auto shadow-xl">
+      <div class="product-image h-fit w-fit">
+        <img src="./img/sample.jpg" alt="Up to date courses" class="rounded-t-xl h-[220px] w-[400px]">
+      </div>
+      <!-- product image -->
+      <div class="mx-8 my-8">
+      <h1 class="font-medium mt-5 mb-3 text-2xl rounded-b-xl">Community Based Learning</h1>
+        <!-- product info -->
+        <p class="font-normal text-sm my-2">By Piyush Khewalkar</p>
+        <p class="flex font-medium mt-5">
+          <span class="mr-2"><img src="img/clock.png" alt="duration"></span>
+          10 Hours Course
+        </p>
+      </div>
+      <div class="w-fit mx-auto my-7">
+        <button class="bg-[#ffa905] px-7 py-3 rounded-full hover:bg-white hover:border-2">View More</button>
+      </div>
+      <!-- product-image -->
+    </div>
+    <!-- product -->
+
+  
+
+
+  </div>
+  <!-- products -->
+</div>
+<!--Features END-->  
+    </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
